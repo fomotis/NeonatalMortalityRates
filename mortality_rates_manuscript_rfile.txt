@@ -1,0 +1,26 @@
+library(haven)
+mr_2013 <- read_dta("C:/Users/User/Desktop/dhs_datasets/mr_2013.dta")
+library(DHS.rates)
+options(survey.lonely.psu = "adjust")
+chmort(mr_2013)
+chmort(mr_2013, JK="Yes",CL=90, Cluster = "v021", Strata="v022",Weight="v005", Period = 12, PeriodEnd = "2012-12")
+chmort(mr_2013, JK="Yes",CL=90, Cluster = "v021", Strata="v022",Weight="v005", Class="v024", Period = 12, PeriodEnd = "2012-12")
+chmort(mr_2013, JK="Yes",CL=90, Cluster = "v021", Strata="v022",Weight="v005", Class="sstate", Period = 12, PeriodEnd = "2012-12")
+quit
+mr_2008 <- read_dta("C:/Users/User/Desktop/dhs_datasets/mr_2008.dta")
+chmort(mr_2008)
+chmort(mr_2008, JK="Yes",CL=90, Cluster = "v021", Strata="v022",Weight="v005", Period = 12, PeriodEnd = "2007-12")
+chmort(mr_2008, JK="Yes",CL=90, Cluster = "v021", Strata="v022",Weight="v005", Class="v024", Period = 12, PeriodEnd = "2007-12")
+chmort(mr_2008, JK="Yes",CL=90, Cluster = "v021", Strata="v022",Weight="v005", Class="sstate", Period = 12, PeriodEnd = "2007-12")
+quit
+mr_2003 <- read_dta("C:/Users/User/Desktop/dhs_datasets/mr_2003.dta")
+chmort(mr_2003)
+chmort(mr_2003, JK="Yes",CL=90, Cluster = "v021", Strata="v022",Weight="v005", Period = 12, PeriodEnd = "2002-12")
+chmort(mr_2003, JK="Yes",CL=90, Cluster = "v021", Strata="v022",Weight="v005", Class="v024", Period = 12, PeriodEnd = "2002-12")
+chmort(mr_2003, JK="Yes",CL=90, Cluster = "v021", Strata="v022",Weight="v005", Class="sstate", Period = 12, PeriodEnd = "2002-12")
+quit
+NGBR21FL_1990 <- read_dta("C:/Users/User/Desktop/dhs_datasets/NGBR21FL_1990.dta")
+chmort(NGBR21FL_1990)
+chmort(NGBR21FL_1990, JK="Yes",CL=90, Cluster = "v021", Strata="v022",Weight="v005", Period = 12, PeriodEnd = "1989-12")
+chmort(mr_2003, JK="Yes",CL=90, Cluster = "v021", Strata="v022",Weight="v005", Class="v024", Period = 12, PeriodEnd = "1989-12")
+quit
