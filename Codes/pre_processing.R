@@ -93,7 +93,7 @@ nmr_2013_region <- lapply(Years_2013, function(x) {
 })
 
 
-
+save.image("Data/NMR.RData")
 
 
 
